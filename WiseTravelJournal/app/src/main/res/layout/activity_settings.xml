@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/ic_mode_day"/>
+
+    <Button
+        android:id="@+id/AboutUs"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="86dp"
+        android:background="@drawable/button_gradient"
+        android:text="About Us"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:elevation="8dp"
+        android:translationZ="4dp"/>
+
+    <Button
+        android:id="@+id/collab_id"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AboutUs"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="86dp"
+        android:background="@drawable/button_gradient"
+        android:elevation="8dp"
+        android:text="Collaborative"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:translationZ="4dp" />
+
+    <Button
+        android:id="@+id/pdf_export_id"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/collab_id"
+        android:layout_alignStart="@+id/collab_id"
+        android:layout_alignEnd="@+id/collab_id"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_gradient"
+        android:text="Pdf export and share"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:elevation="8dp"
+        android:translationZ="4dp" />
+
+    <Button
+        android:id="@+id/privacy_agreement_id"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pdf_export_id"
+        android:layout_alignStart="@+id/pdf_export_id"
+        android:layout_alignEnd="@+id/pdf_export_id"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_gradient"
+        android:text="Privacy and Agreement"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:elevation="8dp"
+        android:translationZ="4dp"/>
+
+    <Button
+        android:id="@+id/progress_bar"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/privacy_agreement_id"
+        android:layout_alignStart="@+id/privacy_agreement_id"
+        android:layout_alignEnd="@+id/privacy_agreement_id"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_gradient"
+        android:text="Progress Bar"
+        android:textColor="@color/white"
+        android:elevation="8dp"
+        android:translationZ="4dp"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:padding="5dp"
+        app:fabCradleMargin="10dp"
+        android:background="@drawable/navbar"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/nav_item_color"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

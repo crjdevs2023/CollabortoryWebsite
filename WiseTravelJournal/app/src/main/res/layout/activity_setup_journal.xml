@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#F8F8FF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupJournal">
+
+    <TextView
+        android:id="@+id/title_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/OTJ_id"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:text="JOURNAL TITLE:"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/title_text"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/title_id"
+        android:layout_alignBottom="@+id/title_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="-14dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="-8dp"
+        android:ems="10"
+        android:layout_toEndOf="@id/title_id"
+        android:hint="@string/enter_journal_hint"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/date_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_id"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="DATE:"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/date_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/date_id"
+        android:layout_alignBottom="@+id/date_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="-8dp"
+        android:layout_toEndOf="@id/date_id"
+        android:ems="10"
+        android:hint="@string/enter_date_text"
+        android:inputType="datetime" />
+
+    <TextView
+        android:id="@+id/geotag_id"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/date_id"
+        android:layout_alignStart="@+id/date_id"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="9dp"
+        android:text="GEO TAG: "
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/location_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/geotag_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="-6dp"
+        android:layout_toEndOf="@id/geotag_id"
+        android:inputType="textPostalAddress" />
+
+    <TextView
+        android:id="@+id/description_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/geotag_id"
+        android:layout_alignStart="@+id/geotag_id"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:text="JOURNAL DESCRIPTION:"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="top|start"
+        android:hint="@string/description_text"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minLines="1"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false" />
+
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/ic_mode_day"/>
+
+    <TextView
+        android:id="@+id/OTJ_id"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="30sp"
+        android:text="OTJ"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_download"
+        android:contentDescription="Save" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:padding="5dp"
+        app:fabCradleMargin="10dp"
+        android:background="@drawable/navbar"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/nav_item_color"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

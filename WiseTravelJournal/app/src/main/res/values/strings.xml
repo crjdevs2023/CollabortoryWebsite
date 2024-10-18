@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WiseTravelJournal</string>
+    <string name="activity2_name">Setup Journal</string>
+    <string name="enter_journal_hint">Enter Journal Title</string>
+    <string name="enter_date_text">Enter Date</string>
+    <string name="description_text">Enter Description</string>
+    <string name="offline_text">OFFLINE BUTTON</string>
+    <string name="setup_text">NEW JOURNAL SETUP</string>
+    <item name="navigation_default" type="id" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_1">1</string>
+    <string name="journal_title">Journal Title</string>
+    <string name="date">Date</string>
+    <string name="geo_tag">Geo Tag</string>
+    <string name="journal_description">Journal Description</string>
+    <string name="contributions"> 1. Design Layout \n 2. Add Database \n 3. Implement Online Mode</string>
+</resources>
